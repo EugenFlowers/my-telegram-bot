@@ -15,7 +15,7 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
         "Тарифы NetAngels:\n"
         "• Базовый — 401₽/мес\n"
         "• Продвинутый — 499₽/мес\n"
-        "• Эксперт — 695₽/мес\n\n"
+        "• Эксперт — 695₽/мес\n"
         "• Премиум — 1086₽/мес\n\n"
         "Выберите тариф в приложении ⬇️",
         reply_markup=reply_markup
