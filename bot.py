@@ -24,7 +24,25 @@ async def button_callback(update: Update, context: ContextTypes.DEFAULT_TYPE):
     query = update.callback_query
     await query.answer()
 
-    netangels_keyboard = [[InlineKeyboardButton("Открыть NetAngels", url="https://t.me/netangels_app_bot/netangels")]]
+    if query.data == "back":
+        # Возврат на стартовый экран
+        keyboard = [
+            [InlineKeyboardButton("VDS", callback_data="vds")],
+            [InlineKeyboardButton("Хостинг", callback_data="hosting")],
+            [InlineKeyboardButton("Домены", callback_data="domains")]
+        ]
+        reply_markup = InlineKeyboardMarkup(keyboard)
+        await query.edit_message_text(
+            "💎 Выберите услугу NetAngels:",
+            reply_markup=reply_markup
+        )
+        return
+
+    # Клавиатура для услуг: NetAngels + Назад
+    netangels_keyboard = [
+        [InlineKeyboardButton("Открыть NetAngels", url="https://t.me/netangels_app_bot/netangels")],
+        [InlineKeyboardButton("◀️ Назад", callback_data="back")]
+    ]
 
     if query.data == "vds":
         text = (
@@ -61,3 +79,4 @@ app = Application.builder().token(TOKEN).build()
 app.add_handler(CommandHandler("start", start))
 app.add_handler(CallbackQueryHandler(button_callback))
 app.run_polling()
+
