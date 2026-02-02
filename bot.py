@@ -12,11 +12,12 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
     keyboard = [[InlineKeyboardButton("Открыть NetAngels", url="https://t.me/netangels_app_bot/netangels")]]
     reply_markup = InlineKeyboardMarkup(keyboard)
     await update.message.reply_text(
-        "💎 Тарифы NetAngels:\n"
-        "• Базовый — 490₽/мес\n"
-        "• Стандарт — 990₽/мес\n"
-        "• Премиум — 1990₽/мес\n\n"
-        "Выберите тариф в приложении 👇",
+        "Тарифы NetAngels:\n"
+        "• Базовый — 401₽/мес\n"
+        "• Продвинутый — 499₽/мес\n"
+        "• Эксперт — 695₽/мес\n\n"
+        "• Премиум — 1086₽/мес\n\n"
+        "Выберите тариф в приложении ⬇️",
         reply_markup=reply_markup
     )
 
