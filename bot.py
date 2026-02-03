@@ -51,7 +51,7 @@ async def button_callback(update: Update, context: ContextTypes.DEFAULT_TYPE):
             "• От 130₽/мес (Старт-1: 1 ядро, 0.5 ГБ RAM, 10 ГБ)\n"
             "• Защита от DDoS, бэкапы\n"
             "• KVM-виртуализация, Linux/Windows\n\n"
-            "Подробнее на сайте:"
+            "Подробнее на сайте ⬇️"
         )
     elif query.data == "hosting":
         text = (
@@ -60,7 +60,7 @@ async def button_callback(update: Update, context: ContextTypes.DEFAULT_TYPE):
             "• От 150₽/мес (Базовый)\n"
             "• SSL бесплатно, изоляция сайтов\n"
             "• Nginx+Apache, PHP/Python/NodeJS\n\n"
-            "Подробнее на сайте:"
+            "Подробнее на сайте ⬇️"
         )
     elif query.data == "domains":
         text = (
@@ -69,7 +69,7 @@ async def button_callback(update: Update, context: ContextTypes.DEFAULT_TYPE):
             "• Быстрая регистрация\n"
             "• DNS-хостинг, делегирование\n"
             "• Поддержка всех зон (.com, .ru, .su)\n\n"
-            "Подробнее на сайте:"
+            "Подробнее на сайте ⬇️"
         )
 
     reply_markup = InlineKeyboardMarkup(netangels_keyboard)
